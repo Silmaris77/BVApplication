@@ -1,0 +1,294 @@
+/* Styles for Neuroleader Types page */
+
+/* Type details styles */
+.type-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s;
+}
+
+.type-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.type-name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    animation: slideUp 0.8s;
+}
+
+.info-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+    animation: fadeIn 1s;
+}
+
+/* Card styles for type overview */
+.neuro-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #4CAF50;
+}
+
+.neuro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.neuro-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.neuro-title {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: #2E7D32;
+}
+
+.neuro-desc {
+    flex-grow: 1;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Test page styles */
+.test-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.test-header h1 {
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.test-header p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.question-card {
+    padding: 1.8rem;
+    border-radius: 12px;
+    background-color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    border-left: 5px solid #4CAF50;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s;
+}
+
+.question-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.question-number {
+    background: #4CAF50;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.section-header {
+    background: linear-gradient(90deg, #f5f9f5, #ffffff);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0 1rem 0;
+    border-left: 4px solid #4CAF50;
+    font-size: 1.4rem;
+    color: #2E7D32;
+}
+
+/* Result styles */
+.result-card {
+    padding: 2rem;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    animation: slideIn 1s ease-out;
+    border-left: 5px solid #4CAF50;
+}
+
+/* Result header */
+.result-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s;
+}
+
+/* Result description */
+.result-description {
+    animation: slideIn 1.5s;
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Superpower card */
+.superpower-card {
+    padding: 1.5rem; 
+    border-radius: 10px; 
+    background: linear-gradient(145deg, #f5fff5, #e6ffe6);
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+    animation: slideIn 1.5s;
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Weakness card */
+.weakness-card {
+    padding: 1.5rem; 
+    border-radius: 10px; 
+    background: linear-gradient(145deg, #fff5f5, #ffe6e6);
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.15);
+    animation: slideIn 1.5s;
+    animation-delay: 0.9s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Chart section */
+.chart-section {
+    animation: slideIn 1.5s;
+    animation-delay: 1.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Action buttons */
+.action-buttons {
+    animation: slideIn 1.5s;
+    animation-delay: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Social share buttons */
+.share-buttons {
+    text-align: center;
+    margin-top: 2rem;
+    animation: slideIn 1.5s;
+    animation-delay: 1.8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.facebook-btn {
+    background: #3b5998;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.twitter-btn {
+    background: #1DA1F2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.linkedin-btn {
+    background: #0e76a8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes slideIn {
+    0% {transform: translateY(20px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+    .neuro-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .type-name {
+        font-size: 2rem;
+    }
+    
+    .info-section {
+        padding: 1.5rem;
+    }
+    
+    .question-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Stylized radio labels */
+.stRadio > label {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+}
+
+/* Progress bar styling */
+.stProgress > div > div {
+    background-color: #4CAF50 !important;
+}

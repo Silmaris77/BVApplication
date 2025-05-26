@@ -67,6 +67,12 @@ def apply_custom_css():
         with open(css_path, "r", encoding="utf-8") as css_file:
             st.markdown(f'<style>{css_file.read()}</style>', unsafe_allow_html=True)
     
+    # Include neuroleader specific CSS file if it exists
+    neuroleader_css_path = os.path.join("static", "css", "neuroleader_styles.css")
+    if os.path.exists(neuroleader_css_path):
+        with open(neuroleader_css_path, "r", encoding="utf-8") as css_file:
+            st.markdown(f'<style>{css_file.read()}</style>', unsafe_allow_html=True)
+    
     # Define additional inline CSS for Material Design 3 styling
     custom_css = f"""
     <style>
