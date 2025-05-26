@@ -1,0 +1,24 @@
+[2025-05-26 21:59:31,449] WARNING [utils.error_handler.warning:57] File not found: data\user_files\default_user.json
+[2025-05-26 21:59:31,452] INFO [utils.helpers.info:53] Creating default user data for user default_user
+[2025-05-26 21:59:54,723] WARNING [utils.error_handler.warning:57] File not found: data\user_files\default_user.json
+[2025-05-26 21:59:54,727] INFO [utils.helpers.info:53] Creating default user data for user default_user
+[2025-05-26 22:00:11,489] WARNING [utils.error_handler.warning:57] File not found: data\user_files\default_user.json
+[2025-05-26 22:00:11,491] INFO [utils.helpers.info:53] Creating default user data for user default_user
+[2025-05-26 22:04:20,575] WARNING [utils.error_handler.warning:57] File not found: data\user_files\default_user.json
+[2025-05-26 22:04:20,578] INFO [utils.helpers.info:53] Creating default user data for user default_user
+[2025-05-26 22:05:48,403] WARNING [utils.error_handler.warning:57] File not found: data\user_files\default_user.json
+[2025-05-26 22:05:48,406] INFO [utils.helpers.info:53] Creating default user data for user default_user
+[2025-05-26 22:13:38,830] WARNING [utils.error_handler.warning:57] File not found: C:\Users\pksia\OneDrive\Pulpit\BVApplication\data\user_files\default_user.json
+[2025-05-26 22:13:38,831] INFO [utils.helpers.info:53] Creating default user data for user default_user
+[2025-05-26 22:13:38,848] INFO [utils.helpers.info:53] User data saved successfully for user default_user
+[2025-05-26 22:13:51,486] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 22:15:56,557] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 22:33:59,454] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 22:33:59,454] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 22:43:25,884] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 22:45:48,879] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 23:16:32,908] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 23:16:36,890] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 23:16:43,629] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 23:17:09,634] INFO [utils.helpers.info:53] User data loaded successfully for user default_user
+[2025-05-26 23:17:31,390] INFO [utils.helpers.info:53] User data loaded successfully for user default_user

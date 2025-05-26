@@ -1,0 +1,40 @@
+<!-- Tool Decision SVG Placeholder -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #DCEDC8; }
+    .icon-bg { fill: #689F38; }
+    .text { font: bold 14px sans-serif; fill: #33691E; text-anchor: middle; }
+    .decision-path { fill: none; stroke: #FFF; stroke-width: 3; }
+    .decision-node { fill: #FFF; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="200" height="200" rx="10" />
+  
+  <!-- App icon background -->
+  <rect class="icon-bg" x="60" y="40" width="80" height="80" rx="20" />
+  
+  <!-- Decision tree visualization -->
+  <path class="decision-path" d="M100,50 L100,70" />
+  <circle class="decision-node" cx="100" cy="50" r="5" />
+  <circle class="decision-node" cx="100" cy="70" r="5" />
+  
+  <path class="decision-path" d="M100,70 L80,90" />
+  <path class="decision-path" d="M100,70 L120,90" />
+  <circle class="decision-node" cx="80" cy="90" r="5" />
+  <circle class="decision-node" cx="120" cy="90" r="5" />
+  
+  <path class="decision-path" d="M80,90 L70,110" />
+  <path class="decision-path" d="M80,90 L90,110" />
+  <circle class="decision-node" cx="70" cy="110" r="5" />
+  <circle class="decision-node" cx="90" cy="110" r="5" />
+  
+  <path class="decision-path" d="M120,90 L110,110" />
+  <path class="decision-path" d="M120,90 L130,110" />
+  <circle class="decision-node" cx="110" cy="110" r="5" />
+  <circle class="decision-node" cx="130" cy="110" r="5" />
+  
+  <!-- App name -->
+  <text x="100" y="150" class="text">Decision Master</text>
+  <text x="100" y="170" class="text">App</text>
+</svg>

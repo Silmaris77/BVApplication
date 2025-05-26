@@ -1,0 +1,37 @@
+<!-- Emotions Decisions SVG Placeholder -->
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #FCE4EC; }
+    .brain { fill: none; stroke: #E91E63; stroke-width: 4; }
+    .emotion { fill: #F8BBD0; stroke: #C2185B; stroke-width: 2; }
+    .decision { fill: #BBDEFB; stroke: #1976D2; stroke-width: 2; }
+    .arrow { fill: none; stroke: #9E9E9E; stroke-width: 3; marker-end: url(#arrowhead); }
+    .text { font: bold 20px sans-serif; fill: #333; text-anchor: middle; }
+  </style>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9E9E9E" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="background" width="600" height="300" rx="20" />
+  
+  <!-- Brain outline -->
+  <path class="brain" d="M200,100 C150,100 120,140 120,180 C120,220 150,250 200,250 C250,250 280,220 280,180 C280,140 250,100 200,100 Z" />
+  
+  <!-- Emotion cloud -->
+  <path class="emotion" d="M140,140 C130,130 140,120 150,130 C160,110 180,120 175,135 C190,130 200,145 185,155 C190,165 175,175 165,165 C155,180 140,165 145,160 C130,165 125,145 140,140 Z" />
+  
+  <!-- Decision box -->
+  <rect class="decision" x="400" y="150" width="100" height="60" rx="10" />
+  
+  <!-- Arrow from emotion to decision -->
+  <path class="arrow" d="M200,180 C250,180 300,180 400,180" />
+  
+  <!-- Labels -->
+  <text x="200" y="80" class="text">Emocje</text>
+  <text x="450" y="140" class="text">Decyzje</text>
+</svg>

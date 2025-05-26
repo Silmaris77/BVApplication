@@ -1,0 +1,74 @@
+[
+  {
+    "id": "neuroanalityk",
+    "name": "Neuroanalityk – Unikający Ryzyka",
+    "icon": "🧠",
+    "short_description": "Rozważny, skrupulatny, często paraliżowany nadmiarem analiz. Lider, który ma trudności z podejmowaniem decyzji.",
+    "supermoc": "Wyczuwa zagrożenia i analizuje scenariusze ryzyka jak nikt inny",
+    "slabość": "Traci okazje przez zwłokę",
+    "neurobiologia": "Niska aktywność w korze przedczołowej, odpowiedzialnej za planowanie i podejmowanie decyzji. Wysoka aktywność w układzie limbicznym, szczególnie w obszarze ciała migdałowatego, odpowiedzialnego za reakcje na zagrożenia i lęk.",
+    "markdown_file": "neuroanalityk.md",
+    "image": "neuroanalityk.png",
+    "category": "poznawczy"
+  },
+  {
+    "id": "neuroreaktor",
+    "name": "Neuroreaktor – Impulsywny Strażnik",
+    "icon": "🔥",
+    "short_description": "Lider, który reaguje impulsywnie na stres i emocje, działa błyskawicznie i emocjonalnie, często bez pełnych danych.",
+    "supermoc": "Zdolność do działania w kryzysie",
+    "slabość": "Podejmuje ryzykowne decyzje",
+    "neurobiologia": "Wysoka aktywność w układzie limbicznym i hipokampie, odpowiedzialnym za przetwarzanie emocji i pamięć. Niska aktywność w korze przedczołowej, odpowiedzialnej za logiczne myślenie i planowanie.",
+    "markdown_file": "neuroreaktor.md",
+    "image": "neuroreaktor.png",
+    "category": "emocjonalny"
+  },
+  {
+    "id": "neurobalanser",
+    "name": "Neurobalanser – Zbalansowany Integrator",
+    "icon": "⚖️",
+    "short_description": "Liderzy, którzy potrafią łączyć racjonalność z empatią, podejmując decyzje w oparciu o dane oraz intuicję.",
+    "supermoc": "Inteligencja emocjonalna + logika",
+    "slabość": "Może zbyt długo się wahać",
+    "neurobiologia": "Zrównoważona aktywność w korze przedczołowej i układzie limbicznym, co pozwala na logiczne myślenie i rozumienie emocji. Optymalna aktywność w hipokampie i układzie oksytocynowym, co sprzyja zarządzaniu emocjami i komunikacji.",
+    "markdown_file": "neurobalanser.md",
+    "image": "neurobalanser.png",
+    "category": "zrównoważony"
+  },
+  {
+    "id": "neuroempata",
+    "name": "Neuroempata – Architekt Relacji",
+    "icon": "🌱",
+    "short_description": "Lider, który skupiają się na emocjonalnych potrzebach zespołu. Ceni zaufanie, dobre relacje i komunikację w zespole.",
+    "supermoc": "Więzi emocjonalne i zaangażowanie zespołu",
+    "slabość": "Trudność z obiektywizmem",
+    "neurobiologia": "Wysoka aktywność w układzie oksytocynowym, odpowiedzialnym za tworzenie więzi. Silna aktywność w układzie limbicznym, odpowiedzialnym za emocje i motywację do współpracy.",
+    "markdown_file": "neuroempata.md",
+    "image": "neuroempata.png",
+    "category": "społeczny"
+  },
+  {
+    "id": "neuroinnowator",
+    "name": "Neuroinnowator – Nawigator Zmiany",
+    "icon": "🌊",
+    "short_description": "Liderzy, którzy potrafią dostosować swoje podejście do zmieniającej się sytuacji. Są otwarci na nowe rozwiązania.",
+    "supermoc": "Adaptacja i innowacyjność",
+    "slabość": "Brak konsekwencji i cierpliwości",
+    "neurobiologia": "Wysoka aktywność w hipokampie i neuroplastyczności, co pozwala na łatwą adaptację do nowych warunków. Zrównoważona aktywność w korze przedczołowej, co wspomaga planowanie i elastyczność w podejmowaniu decyzji.",
+    "markdown_file": "neuroinnowator.md",
+    "image": "neuroinnowator.png",
+    "category": "adaptacyjny"
+  },
+  {
+    "id": "neuroinspirator",
+    "name": "Neuroinspirator – Charyzmatyczny Wizjoner",
+    "icon": "🌟",
+    "short_description": "Liderzy, którzy potrafią zmotywować innych do działania dzięki swojej osobowości, wizji i entuzjazmowi.",
+    "supermoc": "Wpływ, energia, wizja",
+    "slabość": "Może zdominować zespół",
+    "neurobiologia": "Silna aktywność w układzie limbicznym, odpowiedzialnym za emocje i motywację. Aktywność w przedniej korze mózgowej, odpowiedzialnej za przekonywanie i wpływanie na innych.",
+    "markdown_file": "neuroinspirator.md",
+    "image": "neuroinspirator.png",
+    "category": "inspiracyjny"
+  }
+]

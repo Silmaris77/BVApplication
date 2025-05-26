@@ -1,0 +1,380 @@
+"""
+User profile components for the BrainVenture application.
+"""
+
+import streamlit as st
+import os
+import json
+from datetime import datetime
+import pandas as pd
+import random
+from datetime import timedelta
+
+from utils.ui import avatar, progress_bar, card, badge
+from utils.helpers import (
+    calculate_progress, load_user_data, save_user_data,
+    format_date
+)
+from utils.validators import validate_form_data, validate_file_upload
+from config.content_config import load_course_structure
+
+def user_profile_header(user_data):
+    """
+    Display the user profile header with avatar and basic info.
+    
+    Args:
+        user_data (dict): User data.
+    """
+    col1, col2 = st.columns([1, 3])
+    
+    with col1:
+        avatar(
+            name=user_data.get("profile", {}).get("display_name", "User"),
+            size=150,
+            image_path=user_data.get("profile", {}).get("avatar")
+        )
+    
+    with col2:
+        st.markdown(f"# {user_data.get('profile', {}).get('display_name', 'User')}")
+        
+        # Display neuroleader type if available
+        neuroleader_type = user_data.get("progress", {}).get("neuroleader_type")
+        if neuroleader_type:
+            st.markdown(f"**Typ Neurolidera:** {neuroleader_type.capitalize()}")
+        
+        # Display user stats
+        completed_lessons = len(user_data.get("progress", {}).get("completed_lessons", []))
+        st.markdown(f"**Ukończone lekcje:** {completed_lessons}")
+        
+        # Display joined date
+        joined_date = user_data.get("created_at", format_date(datetime.now()))
+        st.markdown(f"**Dołączył(a):** {joined_date}")
+        
+        # Display email if available
+        email = user_data.get("profile", {}).get("email", "")
+        if email:
+            st.markdown(f"**Email:** {email}")
+
+def user_progress_summary(user_data):
+    """
+    Display a summary of the user's course progress.
+    
+    Args:
+        user_data (dict): User data.
+    """
+    st.markdown("## Twój Postęp")
+    
+    # Load course structure to calculate progress
+    course_structure = load_course_structure()
+    
+    # Count total lessons
+    total_lessons = 0
+    for block in course_structure:
+        for module in block.get("modules", []):
+            total_lessons += len(module.get("lessons", []))
+    
+    # Get completed lessons
+    completed_lessons = user_data.get("progress", {}).get("completed_lessons", [])
+    completed_count = len(completed_lessons)
+    
+    # Calculate progress percentage
+    progress_percentage = calculate_progress(completed_count, total_lessons)
+    
+    # Display progress bar
+    progress_bar(completed_count, total_lessons, f"Ogólny postęp w kursie: {progress_percentage}%")
+    
+    # Display block-level progress
+    st.markdown("### Postęp w blokach tematycznych")
+    
+    for block_index, block in enumerate(course_structure):
+        block_title = block.get("title", f"Blok {block_index + 1}")
+        block_emoji = block.get("emoji", "📚")
+        
+        # Count lessons in this block
+        block_total_lessons = 0
+        block_completed_lessons = 0
+        
+        for module_index, module in enumerate(block.get("modules", [])):
+            module_lessons = module.get("lessons", [])
+            block_total_lessons += len(module_lessons)
+            
+            # Count completed lessons in this module
+            for lesson_index, lesson in enumerate(module_lessons):
+                lesson_id = f"b{block_index+1}_m{module_index+1}_l{lesson_index+1}"
+                if lesson_id in completed_lessons:
+                    block_completed_lessons += 1
+        
+        # Calculate block progress
+        if block_total_lessons > 0:
+            block_progress = calculate_progress(block_completed_lessons, block_total_lessons)
+        else:
+            block_progress = 0
+        
+        # Display block progress
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            st.markdown(f"### {block_emoji}")
+        with col2:
+            st.markdown(f"**{block_title}**")
+            st.progress(block_progress / 100, text=f"{block_completed_lessons}/{block_total_lessons} lekcji ({block_progress}%)")
+
+def user_achievements(user_data):
+    """
+    Display user achievements.
+    
+    Args:
+        user_data (dict): User data.
+    """
+    st.markdown("## Twoje Osiągnięcia")
+    
+    achievements = user_data.get("achievements", [])
+    
+    if not achievements:
+        st.info("Nie masz jeszcze żadnych osiągnięć. Zacznij kurs, aby zdobyć pierwsze!")
+        return
+    
+    # Display achievements in a grid
+    cols = st.columns(3)
+    
+    for i, achievement in enumerate(achievements):
+        with cols[i % 3]:
+            card(
+                title=achievement.get("name", "Achievement"),
+                content=achievement.get("description", ""),
+                icon=achievement.get("icon", "🏆"),
+                color="#FFD700"  # Gold color for achievements
+            )
+
+def user_profile_settings(user_data, user_id):
+    """
+    Display and handle user profile settings form.
+    
+    Args:
+        user_data (dict): User data.
+        user_id (str): User ID.
+    """
+    st.markdown("## Ustawienia Profilu")
+    
+    # Get current profile data
+    profile = user_data.get("profile", {})
+    
+    with st.form("profile_settings"):
+        # Display name
+        display_name = st.text_input(
+            "Imię i nazwisko",
+            value=profile.get("display_name", "")
+        )
+        
+        # Email
+        email = st.text_input(
+            "Email",
+            value=profile.get("email", "")
+        )
+        
+        # Bio
+        bio = st.text_area(
+            "O mnie",
+            value=profile.get("bio", ""),
+            max_chars=500
+        )
+        
+        # Avatar upload
+        st.markdown("### Zdjęcie profilowe")
+        avatar_file = st.file_uploader(
+            "Wybierz zdjęcie (opcjonalnie)",
+            type=["jpg", "jpeg", "png"]
+        )
+        
+        # Notification preferences
+        st.markdown("### Preferencje powiadomień")
+        notifications_enabled = st.checkbox(
+            "Włącz powiadomienia w aplikacji",
+            value=user_data.get("preferences", {}).get("notifications_enabled", True)
+        )
+        
+        email_updates = st.checkbox(
+            "Subskrybuj powiadomienia email",
+            value=user_data.get("preferences", {}).get("email_updates", False)
+        )
+        
+        # Theme selection
+        st.markdown("### Wygląd")
+        theme = st.selectbox(
+            "Motyw",
+            options=["Jasny", "Ciemny", "Systemowy"],
+            index=["jasny", "ciemny", "systemowy"].index(
+                user_data.get("preferences", {}).get("theme", "jasny")
+            )
+        )
+        
+        # Submit button
+        submitted = st.form_submit_button("Zapisz ustawienia")
+    
+    if submitted:
+        # Validate form data
+        form_data = {
+            "display_name": display_name,
+            "email": email,
+            "bio": bio
+        }
+        
+        valid, errors = validate_form_data(form_data, ["display_name"])
+        
+        if not valid:
+            for field, error in errors.items():
+                st.error(f"{error}")
+        else:
+            # Handle avatar upload if provided
+            avatar_path = profile.get("avatar")
+            if avatar_file:
+                valid_file, file_error = validate_file_upload(
+                    avatar_file, 
+                    allowed_extensions=["jpg", "jpeg", "png"],
+                    max_size_mb=2
+                )
+                
+                if valid_file:
+                    # Save the avatar file
+                    avatar_dir = os.path.join("data", "user_files", "avatars")
+                    os.makedirs(avatar_dir, exist_ok=True)
+                    
+                    avatar_filename = f"{user_id}_{datetime.now().strftime('%Y%m%d%H%M%S')}.png"
+                    avatar_path = os.path.join(avatar_dir, avatar_filename)
+                    
+                    with open(avatar_path, "wb") as f:
+                        f.write(avatar_file.getbuffer())
+                else:
+                    st.error(file_error)
+            
+            # Update user data
+            user_data["profile"] = {
+                "display_name": display_name,
+                "email": email,
+                "bio": bio,
+                "avatar": avatar_path
+            }
+            
+            user_data["preferences"] = {
+                "notifications_enabled": notifications_enabled,
+                "email_updates": email_updates,
+                "theme": theme.lower()
+            }
+            
+            # Save user data
+            if save_user_data(user_data, user_id):
+                st.success("Profil zaktualizowany pomyślnie!")
+            else:
+                st.error("Wystąpił błąd podczas zapisywania profilu.")
+
+def user_activity_log(user_data):
+    """
+    Display user activity log.
+    
+    Args:
+        user_data (dict): User data.
+    """
+    st.markdown("## Historia aktywności")
+    
+    # In a real app, this would come from a database or activity log
+    # For MVP, we'll simulate activity based on completed lessons
+    activities = []
+    
+    # Add completed lessons to activity log
+    completed_lessons = user_data.get("progress", {}).get("completed_lessons", [])
+    for lesson_id in completed_lessons:
+        # Parse lesson ID (format: b1_m1_l1)
+        parts = lesson_id.split("_")
+        if len(parts) == 3:
+            block_num = int(parts[0][1:])
+            module_num = int(parts[1][1:])
+            lesson_num = int(parts[2][1:])
+            
+            # Create a random timestamp for the activity (for demo purposes)
+            days_ago = random.randint(0, 30)
+            activity_time = datetime.now() - timedelta(days=days_ago)
+            
+            activities.append({
+                "type": "lesson_completed",
+                "description": f"Ukończono lekcję {lesson_num} w module {module_num} bloku {block_num}",
+                "timestamp": activity_time,
+                "icon": "📚"
+            })
+    
+    # Add test completion if available
+    neuroleader_type = user_data.get("progress", {}).get("neuroleader_type")
+    if neuroleader_type:
+        days_ago = random.randint(0, 15)
+        activity_time = datetime.now() - timedelta(days=days_ago)
+        
+        activities.append({
+            "type": "test_completed",
+            "description": f"Wykonano test typologii neuroleaderów. Wynik: {neuroleader_type.capitalize()}",
+            "timestamp": activity_time,
+            "icon": "🧩"
+        })
+    
+    # Add random achievements
+    achievements = user_data.get("achievements", [])
+    for achievement in achievements:
+        earned_at = datetime.strptime(achievement.get("earned_at", format_date(datetime.now())), "%d-%m-%Y")
+        
+        activities.append({
+            "type": "achievement_earned",
+            "description": f"Zdobyto osiągnięcie: {achievement.get('name')}",
+            "timestamp": earned_at,
+            "icon": achievement.get("icon", "🏆")
+        })
+    
+    # Sort activities by timestamp (newest first)
+    activities.sort(key=lambda x: x["timestamp"], reverse=True)
+    
+    # Display activities
+    if not activities:
+        st.info("Brak aktywności do wyświetlenia.")
+        return
+    
+    # Convert to DataFrame for easy display
+    df = pd.DataFrame(activities)
+    df["formatted_date"] = df["timestamp"].apply(lambda x: x.strftime("%d-%m-%Y %H:%M"))
+    
+    # Display as a table
+    for _, activity in df.iterrows():
+        col1, col2 = st.columns([1, 10])
+        with col1:
+            st.markdown(f"### {activity['icon']}")
+        with col2:
+            st.markdown(f"**{activity['description']}**")
+            st.markdown(f"*{activity['formatted_date']}*")
+        st.divider()
+
+# Add the missing functions needed by 4_Profil.py
+def user_progress_stats(user_data):
+    """
+    Display detailed statistics about user's progress.
+    
+    Args:
+        user_data (dict): User data.
+    """
+    # This function wraps user_progress_summary to maintain compatibility
+    user_progress_summary(user_data)
+
+def user_activity_timeline(user_data):
+    """
+    Display the user's activity in a timeline format.
+    
+    Args:
+        user_data (dict): User data.
+    """
+    # For MVP, we'll reuse the user_activity_log function
+    user_activity_log(user_data)
+    
+def edit_user_profile_form(user_data, user_id="default_user"):
+    """
+    Display form for editing user profile.
+    
+    Args:
+        user_data (dict): User data.
+        user_id (str): User ID.
+    """
+    # This function wraps user_profile_settings to maintain compatibility
+    user_profile_settings(user_data, user_id)

@@ -1,0 +1,21 @@
+<!-- Neuroempata SVG Placeholder -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #E3F2FD; }
+    .icon { font: bold 120px sans-serif; dominant-baseline: middle; text-anchor: middle; fill: #2196F3; }
+    .title { font: bold 24px sans-serif; dominant-baseline: middle; text-anchor: middle; fill: #1565C0; }
+    .border { fill: none; stroke: #1565C0; stroke-width: 8; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="300" height="300" rx="20" />
+  
+  <!-- Border -->
+  <rect class="border" x="10" y="10" width="280" height="280" rx="15" />
+  
+  <!-- Icon -->
+  <text x="150" y="150" class="icon">🤝</text>
+  
+  <!-- Title -->
+  <text x="150" y="250" class="title">Neuroempata</text>
+</svg>

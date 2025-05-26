@@ -1,0 +1,24 @@
+<!-- Leadership Cases SVG Placeholder -->
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #FFF8E1; }
+    .box { fill: #FFCC80; stroke: #FF9800; stroke-width: 2; }
+    .text { font: bold 24px sans-serif; fill: #333; text-anchor: middle; }
+    .line { stroke: #FF9800; stroke-width: 2; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="600" height="300" rx="20" />
+  
+  <!-- Case study boxes -->
+  <rect class="box" x="100" y="80" width="120" height="150" rx="10" />
+  <rect class="box" x="240" y="80" width="120" height="150" rx="10" />
+  <rect class="box" x="380" y="80" width="120" height="150" rx="10" />
+  
+  <!-- Connecting lines -->
+  <line class="line" x1="160" y1="155" x2="240" y2="155" />
+  <line class="line" x1="360" y1="155" x2="380" y2="155" />
+  
+  <!-- Title -->
+  <text x="300" y="50" class="text">Neuroleadership w Praktyce</text>
+</svg>

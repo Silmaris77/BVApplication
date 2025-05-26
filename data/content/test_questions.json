@@ -1,0 +1,77 @@
+[
+  {
+    "text": "Jak dobrze rozumiesz wpływ procesów neurobiologicznych na swoje zachowania jako lider?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "samoswiadomosc"
+  },
+  {
+    "text": "Jak często potrafisz zidentyfikować procesy neurologiczne stojące za Twoimi decyzjami?",
+    "options": ["1. Nigdy", "2. Rzadko", "3. Czasami", "4. Często", "5. Zawsze"],
+    "category": "samoswiadomosc"
+  },
+  {
+    "text": "W jakim stopniu rozumiesz, jak Twój mózg reaguje na stres?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "samoswiadomosc"
+  },
+  {
+    "text": "Jak skutecznie zarządzasz swoimi emocjami podczas sytuacji stresowych?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "zarzadzanie_emocjami"
+  },
+  {
+    "text": "Jak często potrafisz zachować spokój i jasność myślenia w sytuacjach kryzysowych?",
+    "options": ["1. Nigdy", "2. Rzadko", "3. Czasami", "4. Często", "5. Zawsze"],
+    "category": "zarzadzanie_emocjami"
+  },
+  {
+    "text": "W jakim stopniu potrafisz rozpoznawać i przeciwdziałać reakcjom \"walcz lub uciekaj\" w pracy?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "zarzadzanie_emocjami"
+  },
+  {
+    "text": "Jak oceniasz swoją zdolność do podejmowania racjonalnych decyzji pod presją?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "podejmowanie_decyzji"
+  },
+  {
+    "text": "Jak często zauważasz u siebie błędy poznawcze w procesie podejmowania decyzji?",
+    "options": ["1. Nigdy", "2. Rzadko", "3. Czasami", "4. Często", "5. Zawsze"],
+    "category": "podejmowanie_decyzji"
+  },
+  {
+    "text": "W jakim stopniu uwzględniasz aspekty neurobiologiczne przy podejmowaniu strategicznych decyzji?",
+    "options": ["1. Wcale", "2. W małym stopniu", "3. Umiarkowanie", "4. W znacznym stopniu", "5. Zawsze"],
+    "category": "podejmowanie_decyzji"
+  },
+  {
+    "text": "Jak oceniasz swoją zdolność do empatycznego zrozumienia reakcji emocjonalnych członków zespołu?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "empatia"
+  },
+  {
+    "text": "W jakim stopniu potrafisz dostosować swój styl przywództwa do neurobiologicznych potrzeb innych?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "empatia"
+  },
+  {
+    "text": "Jak często wykorzystujesz wiedzę o neurobiologii w budowaniu relacji w zespole?",
+    "options": ["1. Nigdy", "2. Rzadko", "3. Czasami", "4. Często", "5. Zawsze"],
+    "category": "empatia"
+  },
+  {
+    "text": "Jak oceniasz swoją zdolność do szybkiego przystosowywania się do nowych okoliczności?",
+    "options": ["1. Bardzo słabo", "2. Słabo", "3. Przeciętnie", "4. Dobrze", "5. Bardzo dobrze"],
+    "category": "adaptacja"
+  },
+  {
+    "text": "Jak często poszukujesz nowych podejść do rozwiązywania problemów?",
+    "options": ["1. Nigdy", "2. Rzadko", "3. Czasami", "4. Często", "5. Zawsze"],
+    "category": "adaptacja"
+  },
+  {
+    "text": "W jakim stopniu wykorzystujesz wiedzę o neuroplastyczności w swoim rozwoju jako lider?",
+    "options": ["1. Wcale", "2. W małym stopniu", "3. Umiarkowanie", "4. W znacznym stopniu", "5. Zawsze"],
+    "category": "adaptacja"
+  }
+]

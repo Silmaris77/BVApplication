@@ -1,0 +1,31 @@
+<!-- Book Rock SVG Placeholder -->
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #90CAF9; }
+    .book-cover { fill: #1565C0; }
+    .book-spine { fill: #0D47A1; }
+    .title { font: bold 16px sans-serif; fill: #FFF; text-anchor: middle; }
+    .author { font: italic 12px sans-serif; fill: #FFF; text-anchor: middle; }
+    .brain-icon { fill: #E1F5FE; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="200" height="300" rx="5" />
+  
+  <!-- Book cover -->
+  <rect class="book-cover" x="20" y="40" width="160" height="220" rx="3" />
+  
+  <!-- Book spine -->
+  <rect class="book-spine" x="20" y="40" width="15" height="220" />
+  
+  <!-- Brain icon -->
+  <ellipse class="brain-icon" cx="100" cy="120" rx="40" ry="30" />
+  <path class="brain-icon" d="M80,110 C75,115 75,125 80,130 M120,110 C125,115 125,125 120,130 M85,105 C85,115 95,115 95,105 M105,105 C105,115 115,115 115,105 M85,135 C85,125 95,125 95,135 M105,135 C105,125 115,125 115,135" stroke="#E1F5FE" stroke-width="2" fill="none" />
+  
+  <!-- Title -->
+  <text x="100" y="180" class="title">NEUROLEADERSHIP</text>
+  <text x="100" y="200" class="title">PODSTAWY</text>
+  
+  <!-- Author -->
+  <text x="100" y="240" class="author">Dr David Rock</text>
+</svg>

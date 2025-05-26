@@ -1,0 +1,21 @@
+<!-- Neuroinnowator SVG Placeholder -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #E8F5E9; }
+    .icon { font: bold 120px sans-serif; dominant-baseline: middle; text-anchor: middle; fill: #4CAF50; }
+    .title { font: bold 24px sans-serif; dominant-baseline: middle; text-anchor: middle; fill: #2E7D32; }
+    .border { fill: none; stroke: #2E7D32; stroke-width: 8; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="300" height="300" rx="20" />
+  
+  <!-- Border -->
+  <rect class="border" x="10" y="10" width="280" height="280" rx="15" />
+  
+  <!-- Icon -->
+  <text x="150" y="150" class="icon">💡</text>
+  
+  <!-- Title -->
+  <text x="150" y="250" class="title">Neuroinnowator</text>
+</svg>

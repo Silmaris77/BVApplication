@@ -1,0 +1,46 @@
+<!-- Book Team SVG Placeholder -->
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #FFCC80; }
+    .book-cover { fill: #E65100; }
+    .book-spine { fill: #BF360C; }
+    .title { font: bold 15px sans-serif; fill: #FFF; text-anchor: middle; }
+    .author { font: italic 12px sans-serif; fill: #FFF; text-anchor: middle; }
+    .team-icon { fill: none; stroke: #FFF3E0; stroke-width: 2; }
+    .person { fill: #FFF3E0; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="200" height="300" rx="5" />
+  
+  <!-- Book cover -->
+  <rect class="book-cover" x="20" y="40" width="160" height="220" rx="3" />
+  
+  <!-- Book spine -->
+  <rect class="book-spine" x="20" y="40" width="15" height="220" />
+  
+  <!-- Team circles representing people -->
+  <circle class="person" cx="70" cy="110" r="15" />
+  <circle class="person" cx="100" cy="90" r="15" />
+  <circle class="person" cx="130" cy="110" r="15" />
+  <circle class="person" cx="70" cy="150" r="15" />
+  <circle class="person" cx="100" cy="170" r="15" />
+  <circle class="person" cx="130" cy="150" r="15" />
+  
+  <!-- Connections between team members -->
+  <line class="team-icon" x1="70" y1="110" x2="100" y2="90" />
+  <line class="team-icon" x1="100" y1="90" x2="130" y2="110" />
+  <line class="team-icon" x1="70" y1="110" x2="70" y2="150" />
+  <line class="team-icon" x1="130" y1="110" x2="130" y2="150" />
+  <line class="team-icon" x1="70" y1="150" x2="100" y2="170" />
+  <line class="team-icon" x1="100" y1="170" x2="130" y2="150" />
+  <line class="team-icon" x1="100" y1="90" x2="100" y2="170" />
+  
+  <!-- Title -->
+  <text x="100" y="210" class="title">ZESPÓŁ</text>
+  <text x="100" y="225" class="title">Z PERSPEKTYWY</text>
+  <text x="100" y="240" class="title">NEUROBIOLOGII</text>
+  
+  <!-- Author -->
+  <text x="100" y="260" class="author">Jan Wiśniewski</text>
+</svg>

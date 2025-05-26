@@ -1,0 +1,24 @@
+<!-- Tool Stress SVG Placeholder -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #E1F5FE; }
+    .icon-bg { fill: #0288D1; }
+    .text { font: bold 14px sans-serif; fill: #01579B; text-anchor: middle; }
+    .wave { fill: none; stroke: #FFF; stroke-width: 2; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" width="200" height="200" rx="10" />
+  
+  <!-- App icon background -->
+  <rect class="icon-bg" x="60" y="40" width="80" height="80" rx="20" />
+  
+  <!-- Stress wave visualization -->
+  <path class="wave" d="M70,60 C80,50 90,70 100,60 C110,50 120,70 130,60" />
+  <path class="wave" d="M70,80 C80,70 90,90 100,80 C110,70 120,90 130,80" />
+  <path class="wave" d="M70,100 C85,95 95,105 100,100 C105,95 115,105 130,100" />
+  
+  <!-- App name -->
+  <text x="100" y="150" class="text">Neuro Stress Tracker</text>
+  <text x="100" y="170" class="text">App</text>
+</svg>

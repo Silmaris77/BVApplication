@@ -1,0 +1,12 @@
+# BrainVenture Application Dependencies
+streamlit==1.35.0
+pandas==2.2.0
+numpy==1.26.3
+matplotlib==3.8.3
+plotly==5.19.0
+pillow==10.2.0
+markdown==3.5.2
+watchdog==4.0.0
+pymdown-extensions==10.7
+requests==2.31.0
+streamlit-extras==0.3.6

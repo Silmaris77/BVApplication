@@ -1,0 +1,117 @@
+{
+  "test_name": "Test Typologii Neuroliderów",
+  "description": "Ten test pomoże określić Twój dominujący typ neuroliderski oraz uzyskać wgląd w charakterystykę Twojego stylu przywództwa z perspektywy neurobiologicznej.",
+  "instructions": "Oceń każde stwierdzenie w skali 1-5, gdzie 1 oznacza 'zdecydowanie się nie zgadzam', a 5 oznacza 'zdecydowanie się zgadzam'.",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Przed podjęciem decyzji staram się zgromadzić wszystkie możliwe informacje i dane",
+      "type": "neuroanalityk"
+    },
+    {
+      "id": "q2",
+      "text": "W sytuacjach stresowych często podejmuję szybkie decyzje, kierując się przede wszystkim instynktem",
+      "type": "neuroreaktor"
+    },
+    {
+      "id": "q3",
+      "text": "Potrafię łączyć analizę danych z intuicyjnym wyczuciem sytuacji",
+      "type": "neurobalanser"
+    },
+    {
+      "id": "q4",
+      "text": "Budowanie silnych relacji w zespole jest dla mnie priorytetem",
+      "type": "neuroempata"
+    },
+    {
+      "id": "q5",
+      "text": "Lubię eksperymentować i wprowadzać innowacyjne rozwiązania",
+      "type": "neuroinnowator"
+    },
+    {
+      "id": "q6",
+      "text": "Mam zdolność inspirowania innych do działania dzięki swojej energii i wizji",
+      "type": "neuroinspirator"
+    },
+    {
+      "id": "q7",
+      "text": "Często odkładam decyzje w obawie przed popełnieniem błędu",
+      "type": "neuroanalityk"
+    },
+    {
+      "id": "q8",
+      "text": "W kryzysowych sytuacjach działam natychmiast, nawet jeśli nie mam pełnych informacji",
+      "type": "neuroreaktor"
+    },
+    {
+      "id": "q9",
+      "text": "Podczas podejmowania decyzji biorę pod uwagę zarówno fakty, jak i potrzeby ludzi",
+      "type": "neurobalanser"
+    },
+    {
+      "id": "q10",
+      "text": "Zespół postrzega mnie jako osobę empatyczną i wspierającą",
+      "type": "neuroempata"
+    },
+    {
+      "id": "q11",
+      "text": "Szybko adaptuję się do zmian i nowych okoliczności",
+      "type": "neuroinnowator"
+    },
+    {
+      "id": "q12",
+      "text": "Potrafię skutecznie przekonywać innych do swoich pomysłów i wizji",
+      "type": "neuroinspirator"
+    },
+    {
+      "id": "q13",
+      "text": "Szczegółowa analiza potencjalnego ryzyka jest kluczowym elementem mojego procesu decyzyjnego",
+      "type": "neuroanalityk"
+    },
+    {
+      "id": "q14",
+      "text": "Działam szybko i zdecydowanie, nawet w niepewnych sytuacjach",
+      "type": "neuroreaktor"
+    },
+    {
+      "id": "q15",
+      "text": "Potrafię znaleźć równowagę między emocjami a faktami w procesie podejmowania decyzji",
+      "type": "neurobalanser"
+    },
+    {
+      "id": "q16",
+      "text": "Rozumienie emocji innych ludzi przychodzi mi z łatwością",
+      "type": "neuroempata"
+    },
+    {
+      "id": "q17",
+      "text": "Rutyna szybko staje się dla mnie nudna, wolę poszukiwać nowych rozwiązań",
+      "type": "neuroinnowator"
+    },
+    {
+      "id": "q18",
+      "text": "Ludzie chętnie słuchają moich pomysłów i wizji przyszłości",
+      "type": "neuroinspirator"
+    }
+  ],
+  "score_interpretation": {
+    "neuroanalityk": {
+      "high": "Jesteś typowym Neuroanalitykiem - dokładnym, metodycznym, czasem nadmiernie analizującym sytuację przed podjęciem decyzji."
+    },
+    "neuroreaktor": {
+      "high": "Jesteś typowym Neuroreaktorem - działasz szybko, impulsywnie, często pod wpływem emocji, szczególnie w sytuacjach stresowych."
+    },
+    "neurobalanser": {
+      "high": "Jesteś typowym Neurobalanserem - zrównoważonym, łączącym analityczne podejście z empatią i intuicją."
+    },
+    "neuroempata": {
+      "high": "Jesteś typowym Neuroempatą - budujesz silne więzi w zespole, skupiasz się na potrzebach emocjonalnych i zaufaniu."
+    },
+    "neuroinnowator": {
+      "high": "Jesteś typowym Neuroinnowatorem - elastycznym, otwartym na zmiany, ciągle poszukującym nowych rozwiązań."
+    },
+    "neuroinspirator": {
+      "high": "Jesteś typowym Neuroinspiatorem - charyzmatycznym, motywującym, z naturalną zdolnością do inspirowania i przewodzenia innym."
+    }
+  }
+}
